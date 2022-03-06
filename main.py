@@ -14,7 +14,6 @@ class MyRoot(BoxLayout):
         super(MyRoot, self).__init__()
 
     def generate_number(self):
-        pass
         self.random_label.text = str(random.randint(1, 6))
 
 

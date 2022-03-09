@@ -17,13 +17,14 @@ class MyRoot(BoxLayout):
         self.random_label.text = str(random.randint(1, 6))
 
 
-class KiviInfo(App):
+class RollDice(App):
 
     def build(self):
+        self.title = 'Roll Dice'
         # return Label(text=self.name)
         return MyRoot()
 
 
 if __name__ == '__main__':
-    kiviInfo = KiviInfo()
-    kiviInfo.run()
+    RollDiceApp = RollDice()
+    RollDiceApp.run()

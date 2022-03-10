@@ -3,9 +3,14 @@ from kivy.uix.label import Label
 from kivy.uix.gridlayout import GridLayout
 from kivy.uix.textinput import TextInput
 from kivy.uix.button import Button
+from kivy.properties import ObjectProperty
 
 
 class MyGrid(GridLayout):
+
+    name = ObjectProperty(None)
+    email = ObjectProperty(None)
+
     def __init__(self, **kwargs):
         super(MyGrid, self).__init__(**kwargs)
         self.cols = 1

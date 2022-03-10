@@ -1,12 +1,13 @@
 <MyGrid>:
 
-    name: name  # Global variable name references the id name
-    email: email  # Global variable email references the id email
+    name: name          # Global variable name references the id name
+    lastName: lastName  # Global variable email references the id lastName
+    email: email        # Global variable email references the id email
 
     GridLayout:
         cols:1
-        size: root.width - 200, root.height -200
-        pos: 100, 100
+        size: root.width - 100, root.height -100
+        pos: 50, 50
 
         GridLayout:
             cols:2
@@ -16,6 +17,12 @@
 
             TextInput:
                 id: name
+                multinline:False
+            Label:
+                text: "Last name: "
+
+            TextInput:
+                id: lastName
                 multinline:False
 
             Label:
@@ -27,4 +34,4 @@
 
         Button:
             text:"Submit"
-            on_press: app.btn()
+            on_press: root.btn()

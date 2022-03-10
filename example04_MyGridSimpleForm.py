@@ -1,20 +1,20 @@
+import kivy
 from kivy.app import App
 from kivy.uix.label import Label
 from kivy.uix.gridlayout import GridLayout
 from kivy.uix.textinput import TextInput
 from kivy.uix.button import Button
+from kivy.uix.widget import Widget
 from kivy.properties import ObjectProperty
 
 
-class MyGrid(GridLayout):
+class MyGrid(Widget):
 
     name = ObjectProperty(None)
+    lastName = ObjectProperty(None)
     email = ObjectProperty(None)
 
-    def __init__(self, **kwargs):
-        pass
-
-    def pressed(self, instance):
+    def btn(self):
         name = self.name.text
         last = self.lastName.text
         email = self.email.text
@@ -24,9 +24,11 @@ class MyGrid(GridLayout):
         self.lastName.text = ""
         self.email.text = ""
 
-class MyApp(App):
+
+class example04_MyGridSimpleForm(App):
     def build(self):
+        self.title = "Examle UI by kvlang"
         return MyGrid()
 
 
-MyApp().run()
+example04_MyGridSimpleForm().run()

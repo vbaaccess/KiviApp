@@ -2,6 +2,7 @@ import kivy
 from kivy.app import App
 from kivy.uix.label import Label
 from kivy.uix.boxlayout import BoxLayout
+from kivy.uix.floatlayout import FloatLayout
 
 import random
 
@@ -13,16 +14,18 @@ class MyRoot(BoxLayout):
     def __init__(self):
         super(MyRoot, self).__init__()
 
-    def generate_number(self):
-        self.random_label.text = str(random.randint(1, 6))
+    def generate_number(self, dice_size):
+        self.random_label.text = str(random.randint(1, dice_size))
 
 
 class RollDice(App):
 
     def build(self):
         self.title = 'Roll Dice'
-        # return Label(text=self.name)
-        return MyRoot()
+
+        root = MyRoot()
+
+        return root
 
 
 if __name__ == '__main__':

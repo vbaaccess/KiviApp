@@ -3,17 +3,68 @@
     random_label: random_label
 
     BoxLayout:
+        canvas.before:
+            BorderImage:
+                # BorderImage behaves like the CSS BorderImage
+                border: 10, 10, 10, 10
+                source: 'dices.png'
+                pos: self.pos
+                size: self.size
+
         orientation: 'vertical'
         Label:
             text: "Roll dice (Kivy)"
-            font_size: 64
+            font_size: 110
             color: 0.23, 0.24, 0.35, 1
         Label:
             id: random_label
             text: "-"
             font_size: 64
-        Button:
+        Label:
+            id: random_generate
             text: "Generate"
             font_size: 32
-            size: 100, 50
-            on_press: root.generate_number()
+        BoxLayout:
+            Button:
+                canvas:
+                    Rectangle:
+                        source: "images/dices004.png"
+                        pos: self.pos
+                on_press: root.generate_number(4)
+            Button:
+                canvas:
+                    Rectangle:
+                        source: "images/dices006.png"
+                        pos: self.pos
+                on_press: root.generate_number(6)
+            Button:
+                canvas:
+                    Rectangle:
+                        source: "images/dices008.png"
+                        pos: self.pos
+                on_press: root.generate_number(8)
+            Button:
+                canvas:
+                    Rectangle:
+                        source: "images/dices010.png"
+                        pos: self.pos
+                on_press: root.generate_number(10)
+        BoxLayout:
+            Button:
+                canvas:
+                    Rectangle:
+                        source: "images/dices012.png"
+                        pos: self.pos
+                on_press: root.generate_number(12)
+            Button:
+                canvas:
+                    Rectangle:
+                        source: "images/dices020.png"
+                        pos: self.pos
+                on_press: root.generate_number(20)
+            Button:
+                canvas:
+                    Rectangle:
+                        source: "images/dices100.png"
+                        pos: self.pos
+                on_press: root.generate_number(100)

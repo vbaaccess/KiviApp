@@ -3,6 +3,91 @@
     random_label: random_label
 
     BoxLayout:
+        size_hint: (None, None)
+        width: 100
+        height: self.parent.height
+        orientation: "vertical"
+        spacing: 5
+        padding: 5
+
+        Button:
+            on_press: root.generate_number(4)
+            size_hint: (None, None)
+            width: self.parent.width
+            Image:
+                source: "images/dices004.png"
+                pos: self.parent.pos
+                size: self.parent.size
+                keep_ratio: True
+                allow_stretch: True
+
+        Button:
+            on_press: root.generate_number(6)
+            size_hint: (None, None)
+            width: self.parent.width
+            Image:
+                source: "images/dices006.png"
+                pos: self.parent.pos
+                size: self.parent.size
+                keep_ratio: True
+                allow_stretch: True
+
+        Button:
+            on_press: root.generate_number(8)
+            size_hint: (None, None)
+            width: self.parent.width
+            Image:
+                source: "images/dices008.png"
+                pos: self.parent.pos
+                size: self.parent.size
+                keep_ratio: True
+                allow_stretch: True
+
+        Button:
+            on_press: root.generate_number(10)
+            size_hint: (None, None)
+            width: self.parent.width
+            Image:
+                source: "images/dices010.png"
+                pos: self.parent.pos
+                size: self.parent.size
+                keep_ratio: True
+                allow_stretch: True
+
+        Button:
+            on_press: root.generate_number(12)
+            size_hint: (None, None)
+            width: self.parent.width
+            Image:
+                source: "images/dices012.png"
+                pos: self.parent.pos
+                size: self.parent.size
+                keep_ratio: True
+                allow_stretch: True
+
+        Button:
+            on_press: root.generate_number(20)
+            size_hint: (None, None)
+            width: self.parent.width
+            Image:
+                source: "images/dices020.png"
+                pos: self.parent.pos
+                size: self.parent.size
+                keep_ratio: True
+                allow_stretch: True
+
+        Button:
+            on_press: root.generate_number(100)
+            size_hint: (None, None)
+            width: self.parent.width
+            Image:
+                source: "images/dices100.png"
+                pos: self.parent.pos
+                size: self.parent.size
+                keep_ratio: True
+                allow_stretch: True
+
+    BoxLayout:
         canvas.before:
             BorderImage:
                 # BorderImage behaves like the CSS BorderImage
@@ -13,58 +98,13 @@
 
         orientation: 'vertical'
         Label:
-            text: "Roll dice (Kivy)"
+            text: "Roll dice"
             font_size: 110
             color: 0.23, 0.24, 0.35, 1
         Label:
             id: random_label
             text: "-"
-            font_size: 64
+            font_size: 254
         Label:
-            id: random_generate
-            text: "Generate"
-            font_size: 32
-        BoxLayout:
-            Button:
-                canvas:
-                    Rectangle:
-                        source: "images/dices004.png"
-                        pos: self.pos
-                on_press: root.generate_number(4)
-            Button:
-                canvas:
-                    Rectangle:
-                        source: "images/dices006.png"
-                        pos: self.pos
-                on_press: root.generate_number(6)
-            Button:
-                canvas:
-                    Rectangle:
-                        source: "images/dices008.png"
-                        pos: self.pos
-                on_press: root.generate_number(8)
-            Button:
-                canvas:
-                    Rectangle:
-                        source: "images/dices010.png"
-                        pos: self.pos
-                on_press: root.generate_number(10)
-        BoxLayout:
-            Button:
-                canvas:
-                    Rectangle:
-                        source: "images/dices012.png"
-                        pos: self.pos
-                on_press: root.generate_number(12)
-            Button:
-                canvas:
-                    Rectangle:
-                        source: "images/dices020.png"
-                        pos: self.pos
-                on_press: root.generate_number(20)
-            Button:
-                canvas:
-                    Rectangle:
-                        source: "images/dices100.png"
-                        pos: self.pos
-                on_press: root.generate_number(100)
+            text: ""
+            font_size: 64
